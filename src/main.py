@@ -1,9 +1,11 @@
-import pandas as pd 
-from data.Vendas import vendas
+from service.lojaService import Loja
 
 
-vendas_DF = pd.DataFrame(vendas)
+if __name__ == "__main__":
+    loja = Loja()
+    
+    # print(loja.faturamentoTotal())
+    # print(loja.faturamentoIndividual())
+    print(loja.maisVendido())
 
-
-print(vendas_DF)
 
