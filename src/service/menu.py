@@ -1,9 +1,10 @@
 from service.lojaService import Loja
-
+from charts.lojaCharts import LojaCharts
 
 class Menu:
     def __init__(self):
         self._loja = Loja()
+        self._graficos = LojaCharts(self._loja)
         
     
     def start(self):
@@ -20,6 +21,7 @@ class Menu:
             print("8. Produto mais vendido")
             print("9. Produto com mais de 5 vendas")
             print("10. Relatório")
+            print("11. Gráficos")
             print("0. Sair")
             
             try:
@@ -51,9 +53,34 @@ class Menu:
                 print(self._loja.filtroQtdVenda(5))
             elif opcao == 10:
                 self._loja.relatorio()
+            elif opcao == 11:
+                self.graficosLoja()
             else:
                 print("Opçao não encontrada!")
 
                 
+    def graficosLoja(self):
+        
+        while(True):
+            print("==Gráficos==")
+            print("\n1. faturamento por produto")
+            print("2. faturamento por categoria")
+            print("0. Sair")
             
+            try:
+                opcao = int(input("\nEscolha uma opção: "))
+            except Exception as e:
+                print(f"\nOcorreu um erro: \n{e} \nTente Novamente!")
+                continue
             
+            if opcao == 0:
+                break
+            
+            elif opcao == 1:
+                self._graficos.faturamentoProd()
+                
+            elif opcao == 2:
+                self._graficos.faturamentoCatg()
+            
+            else:
+                print("Opoção não encontrada!!")

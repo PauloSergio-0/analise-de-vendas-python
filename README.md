@@ -91,9 +91,8 @@ Gere gráficos de faturamento por produto e por categoria utilizando Matplotlib.
 
 ## Critérios de conclusão
 
-- [ ] Calcular corretamente o faturamento total.
-- [ ] Consolidar registros repetidos do mesmo produto.
-- [ ] Identificar os produtos mais vendidos e com maior faturamento.
-- [ ] Calcular os resultados por categoria e seus percentuais.
-- [ ] Exibir um relatório legível no terminal.
-- [ ] Separar as responsabilidades em funções (a partir do nível 2).
+- [X] Calcular corretamente o faturamento total.
+- [X] Identificar os produtos mais vendidos e com maior faturamento.
+- [X] Calcular os resultados por categoria e seus percentuais.
+- [X] Exibir um relatório legível no terminal.
+- [X] Separar as responsabilidades em funções (a partir do nível 2).
